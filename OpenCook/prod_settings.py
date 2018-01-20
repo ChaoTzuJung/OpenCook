@@ -1,4 +1,4 @@
-import .settings from *
+from .settings import *
 import dj_database_url
 # 把 debug 模式關掉
 DEBUG = False
