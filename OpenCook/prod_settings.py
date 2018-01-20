@@ -5,7 +5,7 @@ DEBUG = False
 # 遵守 HTTPS 連線中的連線中的 ”X-Forwarder_Proto" header
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDER_PROTO', 'https')
 # 設定靜態檔案位置
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'staticfiles'
 #設定資料庫
 DATABASE = {
   'default': dj_database_url.config()
