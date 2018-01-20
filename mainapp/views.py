@@ -29,6 +29,9 @@ def post_signup(request):
         redirect('/signup', locals())
     return render(request, 'index.html')
 
+def get_shop(request):
+    return render(request, 'shop.html')
+
 def post_logout(request):
     auth.logout(request)
     return redirect('/')

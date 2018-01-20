@@ -4,6 +4,7 @@ from recipe.models import Recipe
 from django.core import serializers
 from django import forms
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 class RecipeForm(forms.ModelForm):
@@ -22,9 +23,11 @@ def get_recipe(request, recipe_id):
     print(recipe)
     return render(request, 'recipe.html', locals())
 
+@login_required
 def get_create_recipe(request):
     return render(request, 'create_recipe.html')
-
+    
+@login_required
 def post_create_recipe(request):
     if request.method == 'POST':
         form = RecipeForm(request.POST)

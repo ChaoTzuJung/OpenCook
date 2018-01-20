@@ -8,6 +8,9 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">OpenCook</a>
+      <ul class="nav navbar-nav">
+        <li><a href="/shop">食在商城</a></li>
+      </ul>
     </div>
     {% if user.is_authenticated %}
       <ul class="nav navbar-nav navbar-right">
@@ -29,7 +32,8 @@
         </div>
         {% csrf_token %}
         <button type="submit" class="btn btn-primary">登入</button>
-        <a href="/signup"><button type="button" class="btn btn-success">註冊</button></a>
+        <a href="/accounts/facebook/login/?process=login"><button type="button" class="btn btn-primary">FB登入</button></a>
+        <a href="/signup"><button type="button" class="btn btn-success">註冊</button></a>        
       </form>
     </div><!--/.navbar-collapse -->
     {% endif %}
