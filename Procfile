@@ -1,1 +1,1 @@
-web: gunicorn OpenCook.wsgi -log-file - 
+web: gunicorn opencook.wsgi --log-file -
